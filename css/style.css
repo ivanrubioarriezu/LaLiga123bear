@@ -417,100 +417,348 @@ textarea {
 button.btn {
   cursor: pointer;
 }
+```css
+/* =========================================================
+   URSUSDATA — FOOTER
+   ========================================================= */
 
 .site-footer {
     position: relative;
     width: 100%;
+
     margin-top: 100px;
-    padding: 28px 40px;
+
+    padding: 0;
+
     box-sizing: border-box;
 
-    background: rgba(255, 255, 255, 0.02);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
 
-    color: rgba(255, 255, 255, 0.55);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.025) 0%,
+            rgba(255, 255, 255, 0.012) 100%
+        );
+
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+
+    color: rgba(255, 255, 255, 0.6);
+
     font-family: inherit;
-    font-size: 0.75rem;
-    letter-spacing: 0.03em;
 }
 
+
+/* =========================================================
+   SUBTLE BACKGROUND GLOW
+   ========================================================= */
+
+.site-footer .footer-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 200px;
+
+    left: 50%;
+    top: -170px;
+
+    transform: translateX(-50%);
+
+    background: rgba(49, 245, 208, 0.045);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER CONTAINER
+   ========================================================= */
+
 .site-footer .footer-inner {
+    position: relative;
+    z-index: 1;
+
     width: 100%;
     max-width: 1200px;
+
     margin: 0 auto;
+
+    padding: 32px 40px;
+
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+
+    gap: 40px;
 }
+
+
+/* =========================================================
+   BRAND SECTION
+   ========================================================= */
+
+.site-footer .footer-brand-section {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
 
 .site-footer .footer-brand {
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    gap: 11px;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+    font-weight: 650;
+
+    letter-spacing: 0.055em;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.site-footer .footer-brand:hover {
+    opacity: 0.85;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   LOGO WRAPPER
+   ========================================================= */
+
+.site-footer .footer-logo-wrapper {
+    width: 30px;
+    height: 30px;
+
+    flex: 0 0 30px;
+
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 
-    color: rgba(255, 255, 255, 0.85);
-    font-weight: 600;
-    letter-spacing: 0.05em;
+    box-sizing: border-box;
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 18px rgba(49, 245, 208, 0.06);
 }
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .site-footer .footer-logo {
-    width: 26px;
-    height: 26px;
+    display: block;
+
+    width: 19px !important;
+    height: 19px !important;
+
+    max-width: 19px !important;
+    max-height: 19px !important;
+
+    min-width: 19px !important;
+    min-height: 19px !important;
+
     object-fit: contain;
+
     opacity: 0.9;
+
+    margin: 0;
+
+    padding: 0;
 }
 
-.site-footer .footer-right {
+
+/* =========================================================
+   BRAND NAME
+   ========================================================= */
+
+.site-footer .footer-brand-name {
+    display: inline-block;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.site-footer .footer-tagline {
+    margin: 0 0 0 41px;
+
+    color: rgba(255, 255, 255, 0.32);
+
+    font-size: 0.68rem;
+
+    line-height: 1.4;
+
+    letter-spacing: 0.035em;
+}
+
+
+/* =========================================================
+   COPYRIGHT / META
+   ========================================================= */
+
+.site-footer .footer-meta {
     display: flex;
+
     align-items: center;
-    gap: 10px;
 
-    color: rgba(255, 255, 255, 0.4);
+    justify-content: flex-end;
+
+    gap: 11px;
+
+    white-space: nowrap;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.025em;
 }
 
-.site-footer .footer-dot {
-    color: #31f5d0;
-    opacity: 0.6;
+
+/* =========================================================
+   COPYRIGHT
+   ========================================================= */
+
+.site-footer .footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
 }
 
-@media (max-width: 600px) {
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.site-footer .footer-divider {
+    display: block;
+
+    width: 1px;
+    height: 13px;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   RIGHTS
+   ========================================================= */
+
+.site-footer .footer-rights {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
     .site-footer {
         margin-top: 70px;
-        padding: 25px 20px;
     }
 
     .site-footer .footer-inner {
+
+        padding: 28px 22px;
+
         flex-direction: column;
+
+        align-items: center;
+
         justify-content: center;
-        gap: 14px;
+
+        gap: 20px;
+
         text-align: center;
     }
 
-    .site-footer .footer-right {
-        flex-wrap: wrap;
+
+    .site-footer .footer-brand-section {
+        align-items: center;
+    }
+
+
+    .site-footer .footer-brand {
         justify-content: center;
     }
-}
 
-/* Mobile */
-@media (max-width: 600px) {
-    .site-footer {
-        margin-top: 60px;
-        padding-bottom: 22px;
+
+    .site-footer .footer-tagline {
+        margin-left: 0;
     }
 
-    .footer-content {
+
+    .site-footer .footer-meta {
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .site-footer .footer-meta {
+
         flex-direction: column;
-        gap: 5px;
-        font-size: 0.7rem;
+
+        gap: 6px;
     }
 
-    .footer-separator {
-        display: none;
+
+    .site-footer .footer-divider {
+
+        width: 30px;
+        height: 1px;
     }
 }
+```
+
 
 @media (max-width: 900px) {
   .hero, .split, .contact-grid {
