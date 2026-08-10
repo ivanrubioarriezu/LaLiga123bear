@@ -418,48 +418,80 @@ button.btn {
   cursor: pointer;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
-
 .site-footer {
+    position: relative;
     width: 100%;
-    margin-top: 80px;
-    padding: 0 0 28px;
+    margin-top: 100px;
+    padding: 28px 40px;
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
     color: rgba(255, 255, 255, 0.55);
     font-family: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
 }
 
-.footer-line {
+.site-footer .footer-inner {
     width: 100%;
-    height: 1px;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.15) 20%,
-        rgba(255, 255, 255, 0.15) 80%,
-        transparent 100%
-    );
-    margin-bottom: 22px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.footer-content {
+.site-footer .footer-brand {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
-}
 
-.footer-brand {
     color: rgba(255, 255, 255, 0.85);
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.05em;
 }
 
-.footer-separator {
-    color: rgba(255, 255, 255, 0.3);
+.site-footer .footer-logo {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    opacity: 0.9;
+}
+
+.site-footer .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.site-footer .footer-dot {
+    color: #31f5d0;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    .site-footer {
+        margin-top: 70px;
+        padding: 25px 20px;
+    }
+
+    .site-footer .footer-inner {
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        text-align: center;
+    }
+
+    .site-footer .footer-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 /* Mobile */
