@@ -418,6 +418,19 @@ button.btn {
   cursor: pointer;
 }
 
+.site-footer {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
 
 @media (max-width: 900px) {
   .hero, .split, .contact-grid {
