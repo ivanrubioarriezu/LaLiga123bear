@@ -418,7 +418,6 @@ button.btn {
   cursor: pointer;
 }
 
-
 /* =========================================================
    URSUSDATA — FOOTER
    ========================================================= */
@@ -528,7 +527,7 @@ button.btn {
 
     text-decoration: none;
 
-    font-size: 0.88rem;
+    font-size: 0.99rem;
     font-weight: 650;
 
     letter-spacing: 0.055em;
@@ -624,7 +623,7 @@ button.btn {
 
     color: rgba(255, 255, 255, 0.32);
 
-    font-size: 0.68rem;
+    font-size: 0.85rem;
 
     line-height: 1.4;
 
@@ -647,7 +646,7 @@ button.btn {
 
     white-space: nowrap;
 
-    font-size: 0.68rem;
+    font-size: 0.85rem;
 
     letter-spacing: 0.025em;
 }
