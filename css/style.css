@@ -417,7 +417,8 @@ textarea {
 button.btn {
   cursor: pointer;
 }
-```css
+
+
 /* =========================================================
    URSUSDATA — FOOTER
    ========================================================= */
@@ -757,8 +758,6 @@ button.btn {
         height: 1px;
     }
 }
-```
-
 
 @media (max-width: 900px) {
   .hero, .split, .contact-grid {
